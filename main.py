@@ -7,7 +7,7 @@ import io
 
 # Параметри S3
 s3_client = boto3.client('s3')
-bucket_name = 'test-bedrock-base'
+bucket_name = 'your-bucket'
 file_key = 'summary_result.json'
 
 # Завантаження файлу resource.json із S3
@@ -15,7 +15,7 @@ resource_obj = s3_client.get_object(Bucket=bucket_name, Key=file_key)
 resource_data = json.load(io.BytesIO(resource_obj['Body'].read()))
 
 # Витягуємо необхідні параметри з файлу
-prompt = resource_data.get("text", "We work from Monday to Friday.")
+prompt = resource_data.get("text", "")
 cfg_scale = resource_data.get("cfg_scale", 10)
 steps = resource_data.get("steps", 50)
 seed = resource_data.get("seed", 0)
