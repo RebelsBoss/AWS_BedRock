@@ -24,4 +24,4 @@
 
 Встановіть необхідні залежності:
 ```bash
-pip install -r requirements.txt
+pip install boto3 beautifulsoup4
