@@ -6,8 +6,8 @@ from bs4 import BeautifulSoup
 
 # Параметри S3
 s3_client = boto3.client('s3')
-bucket_name = 'test-bedrock-base'  # Вкажіть ім'я вашого S3 бакета
-file_key = 'resource.json'  # Файл із текстом у S3
+bucket_name = 'your-bucket'  # Вкажіть ім'я вашого S3 бакета
+file_key = 'your-file.json'  # Файл із текстом у S3
 
 # Завантаження файлу resource.json із S3
 try:
